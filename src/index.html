@@ -4,29 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ficha Alumno</title>
+  <title>Formulario</title>
 </head>
 <body>
-  <div id="alumno">
-    <form id="ficha" action="/api/alumnos/add" method="POST" enctype="application/x-www-form-urlencoded">
+  <div id="usuarios">
+    <form id="ficha" action="" method="POST" enctype="application/x-www-form-urlencoded">
       <div>
         <label for="nombre">Nombre Completo:</label>
         <input type="text" value="" id="nombre" name="nombre">
       </div>
       <div>
-        <label for="control">Numero de Control:</label>
-        <input type="text" value="" id="control" name="control">
+        <label for="edad">Ingrese su Edad :</label>
+        <input type="text" value="" id="edad" name="edad">
       </div>
       <div>
-        <label for="carrera">Carrera:</label>
-        <select id="carr" name="carrera">
-          <option value="" name="siste">--Seleccione:--</option>
-          <option value="siste" name="siste">Ing.Sistemas</option>
-          <option value="meca" name="meca">Ing. Mecatronica</option>
-          <option value="ambi" name="ambi">Ing. Ambiental</option>
-          <option value="elec" name="elec">Ing. Electronica</option>
-        </select>
+        <label for="direccion">Ingrese su direccion :</label>
+        <input type="text" value="" id="direccion" name="direccion">
       </div>
+      <div>
       <input type="submit" value="Enviar">
     </form>
   </div>

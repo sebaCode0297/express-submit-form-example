@@ -7,25 +7,26 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // depósito de datos temporal
-let alumnos = []; // <- se inicia vacío con la aplicación
+let usuarios = []; // <- se inicia vacío con la aplicación
 
 //rutas o endpoints
-app.post('/api/alumnos/add', (req, res, next) => {
-  const alumno = req.body;
-  if(!alumno) {
+app.post('/', (req, res, next) => {
+  const usuario = req.body;
+  if(!usuario) {
     return res.status(400).json({error: 'No hay datos'});
   }
-  alumno.no = alumnos.length + 1;
-  console.log(alumno);
-  alumnos.push(alumno);
-  // podemos enviar el array de alumnos, así por cada vez que accedemos a este
-  // a este endpoint vamos viendo los datos almacenados
-  return res.status(200).json(alumnos);
+  // no recuerdo funcion de esta parte del codigo 
+  usuario.no = usuarios.length + 1;
+
+  //console.log(usuario);
+  usuarios.push(usuario);
+  // podemos enviar el array de usuarios, así por cada vez que accedemos a este endpoint vamos viendo los datos almacenados
+  return res.status(200).json(usuarios);
 });
 
 app.all('/', (req, res) => {
-  const fileName = path.join(__dirname, '/index.html');
-  return res.sendFile(fileName);
+  const nameForm = path.join(__dirname, '/index.html');
+  return res.sendFile(nameForm);
 });
 
 
