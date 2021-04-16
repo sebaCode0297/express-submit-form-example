@@ -16,7 +16,7 @@ app.post('/', (req, res, next) => {
     return res.status(400).json({error: 'No hay datos'});
   }
   // no recuerdo funcion de esta parte del codigo 
-  usuario.no = usuarios.length + 1;
+  usuario.numero = usuarios.length + 1;
 
   //console.log(usuario);
   usuarios.push(usuario);
